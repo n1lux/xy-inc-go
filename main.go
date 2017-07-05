@@ -29,9 +29,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 func handleRequests() {
 	myRouter := mux.NewRouter().StrictSlash(true)
 	myRouter.HandleFunc("/", index).Methods("GET")
-	myRouter.HandleFunc("/pois", listPoisHandler).Methods("GET")
-	myRouter.HandleFunc("/pois", createPoiHandler).Methods("POST")
-	myRouter.HandleFunc("/pois/search", searchPoisHandler).Methods("GET")		
+	myRouter.HandleFunc("/api/pois", listPoisHandler).Methods("GET")
+	myRouter.HandleFunc("/api/pois", createPoiHandler).Methods("POST")
+	myRouter.HandleFunc("/api/pois/search", searchPoisHandler).Methods("GET")		
 	log.Fatal(http.ListenAndServe(":8080", myRouter))	
 }
 
