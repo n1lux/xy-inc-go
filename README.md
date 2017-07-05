@@ -6,9 +6,13 @@ Projeto para cadastro e recuperação Pontos de Interesse (POI's).
 
 1. Clone o repositório
 2. Execute os testes.
+3. Instalar as dependencias
 
 ```console
 git clone https://github.com/n1lux/xy-inc-go.git xyinc
+go get -v -u github.com/gorilla/mux
+got get -v -u github.com/gorilla/gorm
+got get -v -u github.com/mattn/go-sqlite3
 cd xyinc
 ```
 
